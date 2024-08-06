@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/user_nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/user_home.css' %}">
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="top-bar"></div>
+
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="{% static 'assets/images/logo.jpeg' %}" alt="Logo">
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="/iic_app/UserHome/">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">IIC</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/iic_app/UserIICAbout/">About</a></li>
+                        <li><a href="/iic_app/UserIICGlance/">At a Glance</a></li>
+                        <li><a href="/iic_app/UserIICCouncil/">Council</a></li>
+                        <li><a href="/iic_app/UserIICActivity/">My Activity</a></li>
+                        <li><a href="/iic_app/UserIICAchievements/">Achievements</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">EDC</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/iic_app/UserEdcHome/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Courses</a>
+                            <ul class="dropdown-menu2">
+                                <li><a href="/iic_app/UserEdcCourse/">Courses Available</a></li>
+                                <li><a href="/iic_app/UserEdcLearning/">My Learning</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Startup</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/iic_app/UserStartupHome/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Courses</a>
+                            <ul class="dropdown-menu2">
+                                <li><a href="/iic_app/UserStartupCourseAvailable">Courses Available</a></li>
+                                <li><a href="/iic_app/UserStartupLearning/">My Learning</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">TBI</a></li>
+                <li><a href="#"><img class="notification-icon" src="{% static 'assets/images/notifications.png' %}" alt="Notifications"></a></li>
+                <li class="dropdown profile-dropdown">
+                    <a href="#"><img class="profile-icon" src="{% static 'assets/images/profile.png' %}" alt="Profile"></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="bottom-bar"></div>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+
+    </footer>
+
+    <script src="{% static 'js/user_home.js' %}"></script>
+</body>
+</html>
