@@ -1,30 +1,143 @@
-html, body {
-  overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-
-
-
-* {margin: 0;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 0;
-  box-sizing:border-box}
+}
 
-.slideshow-container {
-  max-width: 100%;
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-bar, .bottom-bar {
+  width: 100%;
+  background-color: #F6CA59;
+}
+
+.top-bar {
+  height: 8px;
+}
+
+.bottom-bar {
+  height: 6px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #462753;
+  padding: 0 20px;
+}
+
+.navbar-logo img {
+  height: 50px;
+  border-radius: 27%;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.navbar-menu li {
   position: relative;
-  margin-top: 10px;
-  margin: auto;
-  overflow: hidden;
 }
 
-.scroll-container{
-  overflow-x: hidden;
-  overflow-y: scroll;
-  margin-top: 100px;
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
 }
 
-.mySlides {
+.navbar-menu a:hover {
+  color: #ffcc00;
+}
+
+.navbar-menu a:active {
+  color: #ff6600;
+}
+
+.dropdown-menu {
+  list-style-type: none;
+  text-align: center;
   display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 130px;
+  z-index: 1;
+  padding: 0;
+  border-radius: 0%;
+}
+
+.dropdown-menu a {
+  color: #000;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  border-bottom: 1px solid #462753;
+}
+
+.dropdown-menu li:hover {
+  background-color: #E4C3DE;
+}
+
+.dropdown-menu a:hover {
+  color: #000000;
+}
+
+.dropdown-menu2 {
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  left: 100%;
+  top: 0;
+  z-index: 1;
+  padding: 0;
+  border-radius: 0%;
+}
+
+.dropdown-menu2 a {
+  color: #000;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  border-bottom: 1px solid #462753;
+}
+
+.dropdown-menu2 a:hover {
+  color: #000000;
+}
+
+.dropdown-menu2 a:active {
+  color: #ff6600;
+}
+
+.dropdown-menu li:hover .dropdown-menu2 {
+  display: block;
+}
+
+.profile-dropdown .dropdown-menu {
+  right: 0;
+}
+
+.notification-icon, .profile-icon {
+  height: 24px;
+  width: 24px;
 }
 
 .prev, .next {
@@ -32,7 +145,7 @@ html, body {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: -130px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -51,13 +164,75 @@ html, body {
   background-color: rgba(0,0,0,0.8);
 }
 
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.about-sec {
+  padding: 20px 0;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.w-90 {
+  width: 90%;
 }
 
+.about-sec-inner {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.head_tag {
+  font-size: 30px;
+  color: #b8860b;
+}
+
+.highlight {
+  color: #48246e;
+}
+
+.col-md-4 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-left: 105px; /* Add margin around the image */
+}
+
+.col-md-8 {
+  padding-top: 15px;
+  margin-left: 20px;  /* Space between the image and text */
+  margin-right: 20px; /* Space on the right side of the text */
+}
+
+p {
+  text-align: justify;
+  margin-left: 150px;
+  margin-right: -50px;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #462753; /* Background color of the footer */
+  color: white; /* Text color */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-address, .footer-contact {
+  margin-bottom: 10px;
+}
+
+.footer-contact a {
+  color: #f6ca59; /* Color for email link */
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-bottom {
+  margin-top: 10px;
+  font-size: 14px; /* Font size for the bottom text */
+}

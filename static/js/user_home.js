@@ -1,30 +1,27 @@
 let slideIndex = 1;
+const slides = document.getElementsByClassName("mySlides");
+
 showSlidesAuto();
 
 function plusSlides(n) {
-  slideIndex += n;
-  showSlidesManual(slideIndex);
+  showSlidesManual(slideIndex += n);
 }
 
 function showSlidesAuto() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";  
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].style.display = "block";  
   setTimeout(showSlidesAuto, 5000); // Change image every 5 seconds
 }
 
 function showSlidesManual(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex - 1].style.display = "block";
 }
