@@ -1,0 +1,71 @@
+/* Specific styles for the IIC section */
+.iic-container {
+  font-family: 'Assistant', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 40px;
+  line-height: 1.9;
+}
+
+.iic-box {
+  background-color: #462753;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 400px;
+}
+
+.about-box h2, .functions-box h2{
+  color: #FBCD08;
+}
+
+.about-box {
+  background-color: #674b7b;
+}
+
+.objectives-box {
+  background-color: #dbcdf0;
+  color: #000;
+}
+
+.functions-box {
+  background-color: #674b7b;
+}
+
+.iic-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.iic-container p, .iic-container ul {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px 30px; /* 10px top and bottom, 20px left and right */
+  line-height: 1.5;   /* Optional: Adjust line spacing */
+}
+
+
+.iic-container ul {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.iic-container ul li {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .iic-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  .iic-box {
+      height: 800px;
+      margin: 0 10px;
+  }
+}

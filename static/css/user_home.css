@@ -208,6 +208,7 @@ p {
 }
 
 .footer {
+  font-family: 'Averia Gruesa Libre', cursive;
   background-color: #462753; /* Background color of the footer */
   color: white; /* Text color */
   padding: 20px 0;
@@ -217,22 +218,61 @@ p {
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.footer-address, .footer-contact {
-  margin-bottom: 10px;
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -55px;
 }
 
-.footer-contact a {
-  color: #f6ca59; /* Color for email link */
+.footer-logo {
+  width: 150px; /* Set the desired width */
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 20px;
+  margin-left: -250px;
+}
+
+
+
+.footer-text {
+  flex-grow: 1; /* Ensure this takes up the remaining space */
+  text-align: left; /* Ensure the text is left-aligned */
+  margin-left: -70px;
+}
+
+.footer-divider {
+  width: 100vw; /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Center the hr to cover the entire width */
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  margin-left: -275px;
+}
+
+.footer-contact a{
+  color: #ffffff;
   text-decoration: none;
 }
 
-.footer-contact a:hover {
-  text-decoration: underline; /* Underline on hover */
+.call-icon {
+  height: 1em; /* Matches the icon height to the current font size */
+  width: auto; /* Maintains the aspect ratio */
+  vertical-align: middle; /* Aligns the icon vertically with the text */
 }
 
-.footer-bottom {
-  margin-top: 10px;
-  font-size: 14px; /* Font size for the bottom text */
+.mail-icon {
+  height: 1em; /* Matches the icon height to the current font size */
+  width: auto; /* Maintains the aspect ratio */
+  vertical-align: middle; /* Aligns the icon vertically with the text */
 }
