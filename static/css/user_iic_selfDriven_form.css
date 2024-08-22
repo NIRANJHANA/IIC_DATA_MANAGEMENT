@@ -1,0 +1,94 @@
+.self-driven-activity-form {
+    max-width: 650px; 
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.self-driven-activity-form h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #462753;
+    letter-spacing: 2px;
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+.self-driven-activity-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+    flex-wrap: wrap; 
+}
+
+.self-driven-activity-form .form-group {
+    width: 100%; 
+    margin-bottom: 10px;
+}
+
+.self-driven-activity-form .form-group.half-width {
+    width: 48%; 
+}
+
+.self-driven-activity-form .form-group.full-width {
+    width: 100%;
+}
+
+.self-driven-activity-form label {
+    font-family: 'Outfit', sans-serif;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #696969;
+}
+
+.self-driven-activity-form label span {
+    color: red;
+}
+
+.self-driven-activity-form input[type="text"],
+.self-driven-activity-form input[type="date"],
+.self-driven-activity-form select,
+.self-driven-activity-form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; 
+}
+
+.self-driven-activity-form .form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.self-driven-activity-form .btn-submit,
+.self-driven-activity-form .btn-close {
+    background-color: #00BE90;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 13px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.self-driven-activity-form .btn-close {
+    background-color: #940000;
+    margin-left: 10px;
+}
+
+.self-driven-activity-form .btn-submit:hover {
+    background-color: #00BE90;
+}
+
+.self-driven-activity-form .btn-close:hover {
+    background-color: #940000;
+}
+
+.self-driven-activity-form input[type="file"] {
+    border: none;
+    font-size: 14px;
+    width: 100%;
+}

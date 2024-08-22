@@ -191,13 +191,13 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
-  margin-left: 105px; /* Add margin around the image */
+  margin-left: 105px; 
 }
 
 .col-md-8 {
   padding-top: 15px;
-  margin-left: 20px;  /* Space between the image and text */
-  margin-right: 20px; /* Space on the right side of the text */
+  margin-left: 20px;  
+  margin-right: 20px; 
 }
 
 p {
@@ -209,8 +209,8 @@ p {
 
 .footer {
   font-family: 'Averia Gruesa Libre', cursive;
-  background-color: #462753; /* Background color of the footer */
-  color: white; /* Text color */
+  background-color: #462753; 
+  color: white;
   padding: 20px 0;
   text-align: center;
 }
@@ -231,8 +231,8 @@ p {
 }
 
 .footer-logo {
-  width: 150px; /* Set the desired width */
-  height: auto; /* Maintain the aspect ratio */
+  width: 150px;
+  height: auto;
   margin-right: 20px;
   margin-left: -250px;
 }
@@ -240,14 +240,14 @@ p {
 
 
 .footer-text {
-  flex-grow: 1; /* Ensure this takes up the remaining space */
-  text-align: left; /* Ensure the text is left-aligned */
+  flex-grow: 1; 
+  text-align: left; 
   margin-left: -70px;
 }
 
 .footer-divider {
-  width: 100vw; /* Full viewport width */
-  margin-left: calc(-50vw + 50%); /* Center the hr to cover the entire width */
+  width: 100vw; 
+  margin-left: calc(-50vw + 50%); 
   border: none;
   border-top: 1px solid #ddd;
   margin-top: 20px;
@@ -266,13 +266,13 @@ p {
 }
 
 .call-icon {
-  height: 1em; /* Matches the icon height to the current font size */
-  width: auto; /* Maintains the aspect ratio */
-  vertical-align: middle; /* Aligns the icon vertically with the text */
+  height: 1em; 
+  width: auto;
+  vertical-align: middle;
 }
 
 .mail-icon {
-  height: 1em; /* Matches the icon height to the current font size */
-  width: auto; /* Maintains the aspect ratio */
-  vertical-align: middle; /* Aligns the icon vertically with the text */
+  height: 1em; 
+  width: auto;
+  vertical-align: middle;
 }

@@ -1,0 +1,30 @@
+.search-add-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    width: 200px;
+    background-color: #ece5f1; 
+}
+
+.add-events-button {
+    padding: 8px 16px;
+    background-color: #1a73e8; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.add-events-button span {
+    margin-right: 5px;
+    font-size: 16px;
+}

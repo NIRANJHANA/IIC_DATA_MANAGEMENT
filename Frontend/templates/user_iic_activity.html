@@ -1,7 +1,21 @@
 {% extends 'user_nav.html' %}
-
+{% load static %}
 {% block content %}
-
+<br><br><br><br>
     <h1>iic-activity</h1>
+    <div class="search-add-container">
+        <input type="text" class="search-bar" placeholder="Search">
+        <button class="add-events-button" onclick="navigateToSelfDriven()">
+            <span>+</span> Add Events
+        </button>
+    </div>
+
+    <script>
+        function navigateToSelfDriven() {
+            window.location.href = '/iic_app/UserIICSelfdrivenForm/'; 
+        }
+    </script>
+        
+    
 
 {% endblock %}

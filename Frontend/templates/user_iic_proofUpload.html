@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Importing Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Linking CSS File -->
+    <link rel="stylesheet" href="{% static 'css/user_iic_selfDriven_form.css' %}">
+</head>
+<body>
+    <form class="self-driven-activity-form">
+        <h2>SELF - DRIVEN ACTIVITY</h2>
+        <br><br>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="event-title">Event Title <span>*</span></label>
+                <input type="text" id="event-title" name="event-title" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="type">Type <span>*</span></label>
+                <select id="type" name="type" required>
+                    <option value="">Select Type</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="theme">Theme <span>*</span></label>
+                <select id="theme" name="theme" required>
+                    <option value="">Select Theme</option>
+                </select>
+            </div>
+            <div class="form-group half-width">
+                <label for="quarter">Quarter <span>*</span></label>
+                <select id="quarter" name="quarter" required>
+                    <option value="">Select Quarter</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="category">Category <span>*</span></label>
+                <select id="category" name="category" required>
+                    <option value="">Select Category</option>
+                </select>
+            </div>
+            <div class="form-group half-width">
+                <label for="mode">Mode <span>*</span></label>
+                <select id="mode" name="mode" required>
+                    <option value="">Select Mode</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="objective">Objective <span>*</span></label>
+                <input type="text" id="objective" name="objective" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="start-date">Start Date <span>*</span></label>
+                <input type="date" id="start-date" name="start-date" required>
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="outcome">Outcome <span>*</span></label>
+                <input type="text" id="outcome" name="outcome" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="end-date">End Date <span>*</span></label>
+                <input type="date" id="end-date" name="end-date" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="students">Students <span>*</span></label>
+                <input type="number" id="students" name="students" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="duration">Duration <span>*</span></label>
+                <input type="text" id="duration" name="duration" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="faculty">Faculty <span>*</span></label>
+                <input type="number" id="faculty" name="faculty" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="expenditure">Expenditure <span>*</span></label>
+                <input type="text" id="expenditure" name="expenditure" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="external-participants">External participants <span>*</span></label>
+                <input type="number" id="external-participants" name="external-participants" required>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="brochure">Brochure <span>(PDF max 2MB)</span></label>
+                <input type="file" id="brochure" name="brochure" accept=".pdf">
+            </div>
+            <div class="form-group half-width">
+                <label for="schedule">Schedule <span>(PDF max 2MB)</span></label>
+                <input type="file" id="schedule" name="schedule" accept=".pdf">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="attendance-sheet">Attendance Sheet <span>(PDF max 2MB)</span></label>
+                <input type="file" id="attendance-sheet" name="attendance-sheet" accept=".pdf">
+            </div>
+            <div class="form-group half-width">
+                <label for="guest-detail">Guest Detail <span>(PDF max 2MB)</span></label>
+                <input type="file" id="guest-detail" name="guest-detail" accept=".pdf">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="photo1">Photo - 1 <span>(PNG max 2MB)</span></label>
+                <input type="file" id="photo1" name="photo1" accept=".png">
+            </div>
+            <div class="form-group half-width">
+                <label for="photo2">Photo - 2 <span>(PNG max 2MB)</span></label>
+                <input type="file" id="photo2" name="photo2" accept=".png">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="video-url">Video URL <span>*</span></label>
+                <input type="url" id="video-url" name="video-url" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="promotional-url">Promotional URL</label>
+                <input type="url" id="promotional-url" name="promotional-url">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group full-width">
+                <label for="final-report">Final Report <span>(PDF max 2MB)</span></label>
+                <input type="file" id="final-report" name="final-report" accept=".pdf">
+            </div>
+        </div>
+
+        <br>
+        <div class="form-actions">
+            <button type="submit" class="btn-submit">Submit</button>
+            <button type="button" class="btn-close">Close</button>
+        </div>
+    </form>
+</body>
+</html>

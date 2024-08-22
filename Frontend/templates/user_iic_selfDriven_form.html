@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/user_iic_selfDriven_form.css' %}">
+</head>
+<body>
+    <form class="self-driven-activity-form">
+        <h2>SELF - DRIVEN ACTIVITY</h2>
+        <br><br>
+        
+        <div class="form-row">
+            <div class="form-group full-width">
+                <label for="event-title">Event Title <span>*</span></label>
+                <input type="text" id="event-title" name="event-title" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="start-date">Start Date <span>*</span></label>
+                <input type="date" id="start-date" name="start-date" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="end-date">End Date <span>*</span></label>
+                <input type="date" id="end-date" name="end-date" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="theme">Theme <span>*</span></label>
+                <select id="theme" name="theme" required>
+                    <option value="">Select Theme</option>
+                </select>
+            </div>
+            <div class="form-group half-width">
+                <label for="category">Category <span>*</span></label>
+                <input type="text" id="category" name="category" required>
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="objective">Objective <span>*</span></label>
+                <input type="text" id="objective" name="objective" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="outcome">Outcome</label>
+                <input type="text" id="outcome" name="outcome">
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label for="quarter">Quarter <span>*</span></label>
+                <input type="text" id="quarter" name="quarter" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="organized-by">Organized By <span>*</span></label>
+                <input type="text" id="organized-by" name="organized-by" required>
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group">
+                <label for="upload-brochure">Upload Brochure <span>(PDF max 2MB)</span></label>
+                <input type="file" id="upload-brochure" name="upload-brochure" accept=".pdf">
+            </div>
+        </div>
+        <br>
+        <div class="form-actions">
+            <button type="submit" class="btn-submit">Submit</button>
+            <button type="button" class="btn-close" onclick="navigateToIICActivity()">Close</button>
+        </div>        
+    </form>
+
+    <script>
+        function navigateToIICActivity() {
+            window.location.href = '/iic_app/UserIICActivity/'; 
+        }
+        </script>
+        
+</body>
+</html>

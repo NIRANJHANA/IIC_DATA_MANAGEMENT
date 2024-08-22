@@ -55,3 +55,8 @@ def UserStartupHome(request):
 def UserStartupLearning(request):
     
     return render(request, 'user_startup_myLearning.html')
+
+def UserIICSelfdrivenForm(request):
+    
+    return render(request, 'user_iic_selfDriven_form.html')
+

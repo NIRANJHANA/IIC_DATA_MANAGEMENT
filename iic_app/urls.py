@@ -16,4 +16,5 @@ urlpatterns = [
     path('UserStartupCourseAvailable/',UserStartupCourseAvailable),
     path('UserStartupHome/',UserStartupHome),
     path('UserStartupLearning/',UserStartupLearning),
+    path('UserIICSelfdrivenForm/',UserIICSelfdrivenForm),
 ]

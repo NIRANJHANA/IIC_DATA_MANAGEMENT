@@ -1,4 +1,3 @@
-/* Specific styles for the IIC section */
 .iic-container {
   font-family: 'Assistant', sans-serif;
   display: grid;
@@ -46,8 +45,8 @@
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
-  padding: 10px 30px; /* 10px top and bottom, 20px left and right */
-  line-height: 1.5;   /* Optional: Adjust line spacing */
+  padding: 10px 30px; 
+  line-height: 1.5;   
 }
 
 
