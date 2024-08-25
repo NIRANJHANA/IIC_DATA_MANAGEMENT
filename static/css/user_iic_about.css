@@ -5,9 +5,11 @@
   gap: 20px;
   padding: 40px;
   line-height: 1.9;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.iic-box {
+.iic-container .iic-box {
   background-color: #462753;
   color: white;
   padding: 20px;
@@ -18,20 +20,21 @@
   max-width: 400px;
 }
 
-.about-box h2, .functions-box h2{
+.iic-container .about-box h2,
+.iic-container .functions-box h2 {
   color: #FBCD08;
 }
 
-.about-box {
+.iic-container .about-box {
   background-color: #674b7b;
 }
 
-.objectives-box {
+.iic-container .objectives-box {
   background-color: #dbcdf0;
   color: #000;
 }
 
-.functions-box {
+.iic-container .functions-box {
   background-color: #674b7b;
 }
 
@@ -40,15 +43,15 @@
   font-size: 24px;
 }
 
-.iic-container p, .iic-container ul {
+.iic-container p,
+.iic-container ul {
   text-align: justify;
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
-  padding: 10px 30px; 
-  line-height: 1.5;   
+  padding: 10px 30px;
+  line-height: 1.5;
 }
-
 
 .iic-container ul {
   padding-left: 20px;
@@ -61,10 +64,10 @@
 
 @media (min-width: 768px) {
   .iic-container {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
-  .iic-box {
-      height: 800px;
-      margin: 0 10px;
+  .iic-container .iic-box {
+    height: 800px;
+    margin: 0 10px;
   }
 }

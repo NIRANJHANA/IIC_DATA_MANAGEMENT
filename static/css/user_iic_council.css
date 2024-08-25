@@ -1,97 +1,68 @@
-body {
+.members-section {
     font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.members-section .members-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    border: 2px solid #4B2A6A;
+    box-sizing: border-box;
+    padding-bottom: 20px;
 }
 
-.header {
-    background-color: #5a1e63;
+.members-section .header {
+    background-color: #4B2A6A;
     color: white;
-    padding: 0.5px;
-    text-align: center;
-    border-radius: 5px 5px 0 0;
-}
-
-.members {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    overflow: hidden;
-}
-
-.faculty, .student {
-    flex: 1;
-    min-width: 300px;
-    border-left: 1px solid #ccc;
-}
-
-.faculty:first-child, .student:first-child {
-    border-left: none;
-}
-
-.faculty-header, .student-header {
-    background-color: #D7B248;
     padding: 10px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
-    color: #962222;
-    border-bottom: 2px solid #5a1e63;
+    margin: -3px -3px 20px -3px;
 }
 
-.student-header {
-    background-color: #D7B248;
-}
-
-.faculty-list, .student-list {
-    padding: 10px;
-}
-
-.faculty-item, .student-item {
-    background-color: #f2f2f2;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #eee;
-    height: 100px;
+.members-section .content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: stretch;
 }
 
-.faculty-item:nth-child(odd), .student-item:nth-child(odd) {
-    background-color: #e6e6e6;
+.members-section .column {
+    width: 50%;
+    padding: 10px;
+    background-color: #F0F0F5;
+    border: 1px solid #D5A02B;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
-.footer {
-    width: 100%;
-    background-color: #5a1e63;
+.members-section .section-header {
+    background-color: #D5A02B;
     color: white;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 0;
-    position: relative;
-    left: 0;
-    bottom: 0;
-}
-
-.footer-item {
-    text-align: center;
-    max-width: 300px;
     padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
 }
 
-.footer-item strong {
-    color: #f2f2f2;
+.members-section .member {
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    flex: 1;
+}
+
+.members-section .member strong {
+    font-size: 16px;
+}
+
+.members-section .member + .member {
+    margin-top: 5px;
 }
