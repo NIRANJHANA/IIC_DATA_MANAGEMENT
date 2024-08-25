@@ -223,27 +223,31 @@ p {
   align-items: stretch;
 }
 
-.footer-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: -55px;
-}
-
 .footer-logo {
   width: 150px;
   height: auto;
   margin-right: 20px;
-  margin-left: -250px;
 }
 
-
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -90px; /* Adjust this value to move more left */
+}
 
 .footer-text {
   flex-grow: 1; 
   text-align: left; 
-  margin-left: -70px;
+  margin-left: -90px; /* Adjust this value to move more left */
 }
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  margin-left: -90px; /* Adjust this value to move more left */
+}
+
 
 .footer-divider {
   width: 100vw; 
@@ -254,16 +258,17 @@ p {
   margin-bottom: 20px;
 }
 
-.footer-bottom p {
-  margin: 0;
-  font-size: 14px;
-  margin-left: -275px;
-}
-
-.footer-contact a{
+.footer-contact a {
   color: #ffffff;
   text-decoration: none;
 }
+
+.call-icon, .mail-icon {
+  height: 1em; 
+  width: auto;
+  vertical-align: middle;
+}
+
 
 .call-icon {
   height: 1em; 
