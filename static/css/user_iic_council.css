@@ -1,68 +1,134 @@
-.members-section {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap');
+
+#members-section-wrapper {
+    width: 1150px;
+    margin-left: 200px;
+    font-family: 'Assistant', sans-serif;
+}
+
+#members-section-wrapper .members-section {
+    font-family: 'Assistant', sans-serif;
+    padding: 20px;
     margin: 0;
-    padding: 0;
 }
 
-.members-section .members-container {
-    width: 80%;
-    margin: 20px auto;
-    background-color: white;
-    border: 2px solid #4B2A6A;
-    box-sizing: border-box;
-    padding-bottom: 20px;
-}
-
-.members-section .header {
-    background-color: #4B2A6A;
-    color: white;
-    padding: 10px;
+#members-section-wrapper .members-header {
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
-    margin: -3px -3px 20px -3px;
-}
-
-.members-section .content {
-    display: flex;
-    gap: 20px;
-    padding: 0 20px;
-    box-sizing: border-box;
-    align-items: stretch;
-}
-
-.members-section .column {
-    width: 50%;
-    padding: 10px;
-    background-color: #F0F0F5;
-    border: 1px solid #D5A02B;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
-
-.members-section .section-header {
-    background-color: #D5A02B;
     color: white;
+    background-color: #462753;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#members-section-wrapper .members-container {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #462753;
+}
+
+#members-section-wrapper .section {
+    width: 48%;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#members-section-wrapper .section-header {
+    color: #8F0011;
+    background-color: #F6CA59;
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#members-section-wrapper .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+#members-section-wrapper .faculty-item,
+#members-section-wrapper .student-item {
+    background-color: #EBE7EC;
+    padding: 15px 15px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100px;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+#members-section-wrapper .faculty-item:nth-child(even),
+#members-section-wrapper .student-item:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+#members-section-wrapper .faculty-item:nth-child(odd),
+#members-section-wrapper .student-item:nth-child(odd) {
+    background-color: #EBE7EC;
+}
+
+#members-section-wrapper .faculty-item strong, 
+#members-section-wrapper .student-item strong {
+    font-size: 16px;
+    color: #462753;
+}
+
+#members-section-wrapper .highlighted {
+    background-color: #f0f8ff;
+}
+
+.custom-footer {
+    font-family: 'Averia Gruesa Libre', cursive;
+}
+
+.custom-footer-box h4 {
+    font-family: 'Averia Gruesa Libre', cursive;
+    color: #F6CA59;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.custom-footer-box p {
+    font-family: 'Averia Gruesa Libre', cursive;
+    margin: 0;
+    line-height: 1.5;
+}
+
+footer.custom-footer {
+    background-color: #d9d4e7;
+    padding: 20px 0;
+}
+
+.custom-footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.custom-footer-box {
+    background-color: #462753;
+    border-radius: 20px;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
     text-align: left;
 }
 
-.members-section .member {
-    padding: 10px;
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
-    flex: 1;
+.custom-footer-box a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.members-section .member strong {
-    font-size: 16px;
-}
-
-.members-section .member + .member {
-    margin-top: 5px;
+.custom-footer-box a:hover {
+    text-decoration: underline;
 }

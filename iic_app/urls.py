@@ -1,5 +1,7 @@
 from django.urls import path
 from .views import *
+from . import views
+
 
 urlpatterns = [
     path('UserHome/', UserHome),
@@ -9,7 +11,7 @@ urlpatterns = [
     path('UserIICAbout/',UserIICAbout),
     path('UserIICAchievements/',UserIICAchievements),
     path('UserIICActivity/',UserIICActivity),
-    path('UserIICCouncil/',UserIICCouncil),
+    path('UserIICCouncil/',views.UserIICCouncil, name='council'),
     path('UserIICGlance/',UserIICGlance),
     path('UserIICProofUpload/',UserIICProofUpload),
     path('UserSelfDriven/',UserSelfDriven),

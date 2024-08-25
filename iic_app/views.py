@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.db.models import Count
+from .models import FacultyMember, StudentMember
+from collections import defaultdict
 
 def UserHome(request):
 
@@ -28,9 +31,29 @@ def UserIICActivity(request):
     
     return render(request, 'user_iic_activity.html')
 
-def UserIICCouncil(request):
+
+"""def UserIICCouncil(request):
+    # Retrieve and order faculty members by 'sl_no'
+    faculty_members = FacultyMember.objects.order_by('sl_no')
     
-    return render(request, 'user_iic_council.html')
+    # Calculate rowspan for the 'category' field
+    category_rowspan = defaultdict(int)
+    for member in faculty_members:
+        category_rowspan[member.category] += 1
+
+    # Assign rowspan and reset for next category
+    for member in faculty_members:
+        member.rowspan = category_rowspan[member.category]
+        category_rowspan[member.category] = 0  # Reset to avoid duplication
+
+    # Retrieve student members
+    student_members = StudentMember.objects.all()
+
+    context = {
+        'faculty_members': faculty_members,
+        'student_members': student_members,
+    }
+    return render(request, 'user_iic_council.html', context)"""
 
 def UserIICGlance(request):
     
@@ -59,4 +82,14 @@ def UserStartupLearning(request):
 def UserIICSelfdrivenForm(request):
     
     return render(request, 'user_iic_selfDriven_form.html')
+
+def UserIICCouncil(request):
+    faculty_members = FacultyMember.objects.all().order_by('sl_no')
+    student_members = StudentMember.objects.all().order_by('sl_no')
+
+    context = {
+        'faculty_members': faculty_members,
+        'student_members': student_members,
+    }
+    return render(request, 'user_iic_council.html', context)
 

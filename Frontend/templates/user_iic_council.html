@@ -2,32 +2,67 @@
 
 {% block content %}
 <br><br><br><br><br><br>
-<div class="members-section"> 
-    <div class="members-container">
-        <div class="header">
+<div id="members-section-wrapper">
+    <div class="members-section">
+        <div class="members-header">
             Members
         </div>
-        <div class="content">
-            <div class="column faculty-column">
-                <div class="section faculty">
-                    <div class="section-header">Faculty</div>
-                    <div class="member">
-                        <strong>Dr. Kavitha C</strong><br>
-                        Associate Professor / Chemistry<br>
-                        President & Convener
+        <div class="members-container">
+            <div class="section faculty-section">
+                <div class="section-header faculty-header">Faculty</div>
+                <div class="section-content">
+                    {% for faculty in faculty_members %}
+                    <div class="faculty-item">
+                        <strong>{{ faculty.name }}</strong><br>
+                        {{ faculty.designation_and_address }}<br>
+                        {{ faculty.category }}
                     </div>
+                    {% endfor %}
                 </div>
             </div>
-            <div class="column student-column">
-                <div class="section student">
-                    <div class="section-header">Student</div>
-                    <div class="member">
-                        <strong>Ashwin C</strong><br>
-                        Social Media Coordinator
+
+            <div class="section student-section">
+                <div class="section-header student-header">Student</div>
+                <div class="section-content">
+                    {% for student in student_members %}
+                    <div class="student-item">
+                        <strong>{{ student.name_of_student }}</strong><br>
+                        {{ student.role }}
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </div>
+<br><br><br><br><br>
+<footer class="custom-footer">
+    <div class="custom-footer-container">
+        <div class="custom-footer-box">
+            <h4>Dr. C.Kavitha</h4>
+            <br>
+            <p>
+                President, Convener - IIC<br>
+                Associate Professor<br>
+                Department of Chemistry<br>
+                Bannari Amman Institute of Technology<br>
+                <br>
+                Email: iicbit@bitsathy.ac.in | kavithac@bitsathy.ac.in
+            </p>
+        </div>
+        <div class="custom-footer-box">
+            <h4>Mr. R.Sathishkannan</h4>
+            <br>
+            <p>
+                Vice President, Co-Convener - IIC<br>
+                Assistant Professor - II<br>
+                Department of CSE<br>
+                Bannari Amman Institute of Technology<br>
+                <br>
+                Email: sathishkannanr@bitsathy.ac.in
+            </p>
+        </div>
+    </div>
+</footer>
+
 {% endblock %}
