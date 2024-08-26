@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
+
+
+body {
+    margin: 0;
+}
+
+#login-container {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0e0e0, #6b426a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Rest of your styles below */
+#login-container .login-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    height: 500px;
+}
+
+#login-container .welcome-text {
+    font-family: 'Arima Madurai', cursive;
+    color: #4b295f;
+    font-size: 37px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+#login-container .logo {
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+#login-container .tagline {
+    font-size: 16px;
+    color: #4b295f;
+    margin-bottom: 30px;
+}
+
+#login-container .google-signin-btn {
+    background-color: #4b295f;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#login-container .google-signin-btn:hover {
+    background-color: #3a1f4b;
+}
+
+#login-container .bit-account-link {
+    font-size: 14px;
+    color: #4b295f;
+    text-decoration: none;
+    display: block;
+}
+
+#login-container .bit-account-link:hover {
+    text-decoration: underline;
+}

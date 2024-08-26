@@ -93,3 +93,7 @@ def UserIICCouncil(request):
     }
     return render(request, 'user_iic_council.html', context)
 
+def LoginPage(request):
+    
+    return render(request, 'login.html')
+

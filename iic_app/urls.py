@@ -19,4 +19,5 @@ urlpatterns = [
     path('UserStartupHome/',UserStartupHome),
     path('UserStartupLearning/',UserStartupLearning),
     path('UserIICSelfdrivenForm/',UserIICSelfdrivenForm),
+    path('',LoginPage),
 ]

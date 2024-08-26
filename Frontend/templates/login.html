@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div id="login-container">
+        <div class="login-card">
+            <h1 class="welcome-text">WELCOME</h1>
+            <img src="{% static 'assets/images/login-logo.png' %}" alt="BIT Logo" class="logo">
+            <button class="google-signin-btn">Google Sign In</button>
+            <a href="#" class="bit-account-link">Sign in with BIT account</a>
+        </div>
+    </div>
+</body>
+</html>
