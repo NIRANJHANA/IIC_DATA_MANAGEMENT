@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'css/admin_iic_base.css' %}">
+    
+</head>
+<body>
+    <div class="top-bar"></div>
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static 'assets/images/logo.jpeg' %}" alt="Logo">
+            <span class="brand-name">IIC</span>
+        </div>
+        <div class="nav-links">
+            <a href="/AdminDashboard/" class="nav-item">Home</a>
+            <a href="/AdminEvents/" class="nav-item">Events</a>
+            <a href="#" class="nav-item">
+                <img src="{% static 'assets/images/notifications.png' %}" alt="Notification">
+            </a>
+            <div class="profile-dropdown">
+                <a href="#" class="nav-item">
+                    <img src="{% static 'assets/images/profile.png' %}" alt="Profile">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>            
+        </div>
+    </div>
+    <div class="bottom-bar"></div>
+   
+    <div class="sidebar">
+        <a href="/AdminDashboard/" class="sidebar-item">Dashboard</a>
+        <a href="/AdminReviewers/" class="sidebar-item">Reviewers</a>
+        <a href="/AdminDepartments/" class="sidebar-item">Departments</a>
+        <a href="/AdminSpecialLab/" class="sidebar-item">Special Labs</a>
+        <a href="/AdminClubs/" class="sidebar-item">Clubs</a>
+    </div>
+
+    {% block content %} {% endblock %}
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* General Styles */
+.proof-form {
+    font-family: Arial, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.proof-form h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Section 1 - Event Details */
+.form-section-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+}
+
+.form-section-1 .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns within each row */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-section-1 .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section-1 .form-group label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-section-1 .form-group input,
+.form-section-1 .form-group select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Section 2 - Proofs */
+.form-section-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px;
+}
+
+.form-section-2 .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-section-2 .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section-2 .form-group label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-section-2 .form-group input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Full-width input for URL */
+.full-width {
+    grid-column: span 2;
+}
+
+/* Form Buttons */
+.form-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-buttons .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.form-buttons .btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.form-buttons .btn-danger {
+    background-color: #dc3545;
+    color: white;
+}

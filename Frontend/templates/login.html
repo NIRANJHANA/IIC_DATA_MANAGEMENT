@@ -7,15 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
 </head>
 <body>
     <div id="login-container">
         <div class="login-card">
             <h1 class="welcome-text">WELCOME</h1>
             <img src="{% static 'assets/images/login-logo.png' %}" alt="BIT Logo" class="logo">
-            <button class="google-signin-btn">Google Sign In</button>
+            <div id="g_id_onload"
+                 data-client_id="260677562206-9kefkot5cp7leifgdaugsga4sbf1v4hl.apps.googleusercontent.com"
+                 data-login_uri="YOUR_BACKEND_AUTH_ENDPOINT"
+                 data-auto_prompt="true">
+            </div>
+            <div class="g_id_signin" 
+                 data-type="standard"
+                 data-size="large"
+                 data-theme="outline"
+                 data-text="sign_in_with"
+                 data-logo_alignment="left">
+            </div>
             <a href="#" class="bit-account-link">Sign in with BIT account</a>
         </div>
     </div>
+    
 </body>
 </html>

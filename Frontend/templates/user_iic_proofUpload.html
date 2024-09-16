@@ -1,175 +1,197 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <!-- Importing Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/user_iic_proofUpload.css' %}" />
 
-    <!-- Linking CSS File -->
-    <link rel="stylesheet" href="{% static 'css/user_iic_selfDriven_form.css' %}">
-</head>
-<body>
-    <form class="self-driven-activity-form">
-        <h2>SELF - DRIVEN ACTIVITY</h2>
-        <br><br>
+<h1>PROOF UPLOAD</h1>
+<div class="proof-form">
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
 
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="event-title">Event Title <span>*</span></label>
-                <input type="text" id="event-title" name="event-title" required>
-            </div>
-            <div class="form-group half-width">
-                <label for="type">Type <span>*</span></label>
-                <select id="type" name="type" required>
-                    <option value="">Select Type</option>
-                </select>
-            </div>
+    <!-- Section 1 - Event Details -->
+    <div class="form-section-1">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="id_title">Event Title *</label>
+          {{ event_form.title }}
         </div>
-        
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="theme">Theme <span>*</span></label>
-                <select id="theme" name="theme" required>
-                    <option value="">Select Theme</option>
-                </select>
-            </div>
-            <div class="form-group half-width">
-                <label for="quarter">Quarter <span>*</span></label>
-                <select id="quarter" name="quarter" required>
-                    <option value="">Select Quarter</option>
-                </select>
-            </div>
+        <div class="form-group">
+          <label for="id_event_type">Type *</label>
+          {{ event_form.event_type }}
         </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="id_theme">Theme *</label>
+          {{ event_form.theme }}
+        </div>
+        <div class="form-group">
+          <label for="id_quarter">Quarter *</label>
+          {{ event_form.quarter }}
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="id_category">Category *</label>
+          {{ event_form.category }}
+        </div>
+        <div class="form-group">
+          <label for="id_mode">Mode *</label>
+          {{ event_form.mode }}
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="id_objective">Objective *</label>
+          {{ event_form.objective }}
+        </div>
+        <div class="form-group">
+          <label for="id_outcome">Outcome *</label>
+          {{ event_form.outcome }}
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="id_start_date">Start Date *</label>
+          {{ event_form.start_date }}
+        </div>
+        <div class="form-group">
+          <label for="id_end_date">End Date *</label>
+          {{ event_form.end_date }}
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="id_students">Students *</label>
+          {{ event_form.students }}
+        </div>
+        <div class="form-group">
+          <label for="id_duration">Duration *</label>
+          {{ event_form.duration }}
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="id_faculty">Faculty *</label>
+          {{ event_form.faculty }}
+        </div>
+        <div class="form-group">
+          <label for="id_external_participants">External Participants *</label>
+          {{ event_form.external_participants }}
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="id_expenditure">Expenditure *</label>
+          {{ event_form.expenditure }}
+        </div>
+      </div>
+    </div>
 
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="category">Category <span>*</span></label>
-                <select id="category" name="category" required>
-                    <option value="">Select Category</option>
-                </select>
-            </div>
-            <div class="form-group half-width">
-                <label for="mode">Mode <span>*</span></label>
-                <select id="mode" name="mode" required>
-                    <option value="">Select Mode</option>
-                </select>
-            </div>
+    <!-- Proofs Section -->
+    <hr />
+    <div class="form-section-2">
+      <div class="form-row">
+        <!-- Brochure -->
+        <div class="form-group">
+          <label for="id_brochure">Brochure *</label>
+          <small>PDF (max 2MB)</small>
         </div>
-    
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="objective">Objective <span>*</span></label>
-                <input type="text" id="objective" name="objective" required>
-            </div>
-            <div class="form-group half-width">
-                <label for="start-date">Start Date <span>*</span></label>
-                <input type="date" id="start-date" name="start-date" required>
-            </div>
-        </div>
-    
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="outcome">Outcome <span>*</span></label>
-                <input type="text" id="outcome" name="outcome" required>
-            </div>
-            <div class="form-group half-width">
-                <label for="end-date">End Date <span>*</span></label>
-                <input type="date" id="end-date" name="end-date" required>
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="students">Students <span>*</span></label>
-                <input type="number" id="students" name="students" required>
-            </div>
-            <div class="form-group half-width">
-                <label for="duration">Duration <span>*</span></label>
-                <input type="text" id="duration" name="duration" required>
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="faculty">Faculty <span>*</span></label>
-                <input type="number" id="faculty" name="faculty" required>
-            </div>
-            <div class="form-group half-width">
-                <label for="expenditure">Expenditure <span>*</span></label>
-                <input type="text" id="expenditure" name="expenditure" required>
-            </div>
+        <div class="form-group">
+          <input type="file" id="id_brochure" name="brochure" accept=".pdf" required />
         </div>
 
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="external-participants">External participants <span>*</span></label>
-                <input type="number" id="external-participants" name="external-participants" required>
-            </div>
+        <!-- Schedule -->
+        <div class="form-group">
+          <label for="id_schedule">Schedule *</label>
+          <small>PDF (max 2MB)</small>
+        </div>
+        <div class="form-group">
+          <input type="file" id="id_schedule" name="schedule" accept=".pdf" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <!-- Attendance Sheet -->
+        <div class="form-group">
+          <label for="id_attendance_sheet">Attendance Sheet *</label>
+          <small>PDF (max 2MB)</small>
+        </div>
+        <div class="form-group">
+          <input type="file" id="id_attendance_sheet" name="attendance_sheet" accept=".pdf" required />
         </div>
 
-        <hr>
-        
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="brochure">Brochure <span>(PDF max 2MB)</span></label>
-                <input type="file" id="brochure" name="brochure" accept=".pdf">
-            </div>
-            <div class="form-group half-width">
-                <label for="schedule">Schedule <span>(PDF max 2MB)</span></label>
-                <input type="file" id="schedule" name="schedule" accept=".pdf">
-            </div>
+        <!-- Guest Detail -->
+        <div class="form-group">
+          <label for="id_guest_detail">Guest Detail *</label>
+          <small>PDF (max 2MB)</small>
+        </div>
+        <div class="form-group">
+          <input type="file" id="id_guest_detail" name="guest_detail" accept=".pdf" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <!-- Photo - 1 -->
+        <div class="form-group">
+          <label for="id_photo_1">Photo - 1 *</label>
+          <small>PNG (max 2MB)</small>
+        </div>
+        <div class="form-group">
+          <input type="file" id="id_photo_1" name="photo_1" accept=".png" required />
         </div>
 
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="attendance-sheet">Attendance Sheet <span>(PDF max 2MB)</span></label>
-                <input type="file" id="attendance-sheet" name="attendance-sheet" accept=".pdf">
-            </div>
-            <div class="form-group half-width">
-                <label for="guest-detail">Guest Detail <span>(PDF max 2MB)</span></label>
-                <input type="file" id="guest-detail" name="guest-detail" accept=".pdf">
-            </div>
+        <!-- Photo - 2 -->
+        <div class="form-group">
+          <label for="id_photo_2">Photo - 2 *</label>
+          <small>PNG (max 2MB)</small>
+        </div>
+        <div class="form-group">
+          <input type="file" id="id_photo_2" name="photo_2" accept=".png" required />
+        </div>
+      </div>
+
+      <!-- URL Section -->
+      <div class="form-row">
+        <!-- Video URL -->
+        <div class="form-group">
+          <label for="id_video_url">Video URL *</label>
+        </div>
+        <div class="form-group">
+          <select id="id_video_platform" name="video_platform" required>
+            <option value="">Select Platform</option>
+            <option value="youtube">YouTube</option>
+            <option value="instagram">Instagram</option>
+            <option value="facebook">Facebook</option>
+            <option value="twitter">Twitter</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <input type="text" id="id_video_url" name="video_url" required placeholder="Enter Video URL" />
         </div>
 
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="photo1">Photo - 1 <span>(PNG max 2MB)</span></label>
-                <input type="file" id="photo1" name="photo1" accept=".png">
-            </div>
-            <div class="form-group half-width">
-                <label for="photo2">Photo - 2 <span>(PNG max 2MB)</span></label>
-                <input type="file" id="photo2" name="photo2" accept=".png">
-            </div>
+        <!-- Promotional URL -->
+        <div class="form-group">
+          <label for="id_promotional_url">Promotional URL</label>
         </div>
+        <div class="form-group">
+          <select id="id_promotional_platform" name="promotional_platform">
+            <option value="">Select Platform</option>
+            <option value="youtube">YouTube</option>
+            <option value="instagram">Instagram</option>
+            <option value="facebook">Facebook</option>
+            <option value="twitter">Twitter</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <input type="text" id="id_promotional_url" name="promotional_url" placeholder="Enter Promotional URL" />
+        </div>
+      </div>
+    </div>
 
-        <div class="form-row">
-            <div class="form-group half-width">
-                <label for="video-url">Video URL <span>*</span></label>
-                <input type="url" id="video-url" name="video-url" required>
-            </div>
-            <div class="form-group half-width">
-                <label for="promotional-url">Promotional URL</label>
-                <input type="url" id="promotional-url" name="promotional-url">
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group full-width">
-                <label for="final-report">Final Report <span>(PDF max 2MB)</span></label>
-                <input type="file" id="final-report" name="final-report" accept=".pdf">
-            </div>
-        </div>
-
-        <br>
-        <div class="form-actions">
-            <button type="submit" class="btn-submit">Submit</button>
-            <button type="button" class="btn-close">Close</button>
-        </div>
-    </form>
-</body>
-</html>
+    <!-- Submit buttons -->
+    <div class="form-buttons">
+      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="reset" class="btn btn-danger">Close</button>
+    </div>
+  </form>
+</div>

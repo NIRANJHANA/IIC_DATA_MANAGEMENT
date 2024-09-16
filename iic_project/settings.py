@@ -135,3 +135,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
+AUTH_USER_MODEL = 'iic_app.User'
+
+# Path where uploaded files will be stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# URL to access the uploaded files via browser
+MEDIA_URL = '/media/'

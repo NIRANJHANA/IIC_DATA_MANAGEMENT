@@ -1,0 +1,73 @@
+.create-activity-form {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .create-activity-form h2 {
+    text-align: center;
+    color: #5c246e;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .create-activity-form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .create-activity-form label {
+    font-size: 16px;
+    color: #5c5c5c;
+    margin-bottom: 5px;
+  }
+  
+  .create-activity-form input[type="text"],
+  .create-activity-form input[type="date"],
+  .create-activity-form textarea,
+  .create-activity-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .create-activity-form textarea {
+    height: 100px;
+  }
+  
+  .create-activity-form .required {
+    color: red;
+  }
+  
+  .create-activity-form .form-row small {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .create-activity-form .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .create-activity-form .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create-activity-form .submit-btn {
+    background-color: #00c853;
+    color: white;
+  }
+  
+  .create-activity-form .close-btn {
+    background-color: #b71c1c;
+    color: white;
+  }
+  

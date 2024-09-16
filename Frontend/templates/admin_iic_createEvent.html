@@ -1,0 +1,68 @@
+{% extends 'admin_iic_base.html' %}
+{% load static %}
+{% block content %} 
+<link rel="stylesheet" href="{% static 'css/admin_iic_createEvent.css' %}">
+
+
+<div class="container" style="margin-left: 250px;">
+    <br><br><br><br><br>
+    <form class="create-activity-form">
+        <h2>CREATE ACTIVITY</h2>
+        
+        <div class="form-row">
+          <label for="event-title">Event Title <span class="required">*</span></label>
+          <input type="text" id="event-title" name="event-title" required>
+        </div>
+      
+        <div class="form-row">
+          <label for="start-date">Start Date</label>
+          <input type="date" id="start-date" name="start-date">
+        </div>
+      
+        <div class="form-row">
+          <label for="end-date">End Date</label>
+          <input type="date" id="end-date" name="end-date">
+        </div>
+      
+        <div class="form-row">
+          <label for="description">Description</label>
+          <textarea id="description" name="description"></textarea>
+        </div>
+      
+        <div class="form-row">
+          <label for="activity-type">Activity Type <span class="required">*</span></label>
+          <select id="activity-type" name="activity-type" required>
+            <option value="" disabled selected>Select an option</option>
+            <!-- Options here -->
+          </select>
+        </div>
+      
+        <div class="form-row">
+          <label for="assign-to">Assign To <span class="required">*</span></label>
+          <select id="assign-to" name="assign-to" required>
+            <option value="" disabled selected>Select an option</option>
+            <!-- Options here -->
+          </select>
+        </div>
+      
+        <div class="form-row">
+          <label for="deadline">Deadline <span class="required">*</span></label>
+          <input type="date" id="deadline" name="deadline" required>
+        </div>
+      
+        <div class="form-row">
+          <label for="upload-document">Activity Guide</label>
+          <input type="file" id="upload-document" name="upload-document" accept=".pdf" required>
+          <small>PDF (max 2MB)</small>
+        </div>
+      
+        <div class="form-buttons">
+          <button type="submit" class="btn submit-btn">Submit</button>
+          <button type="button" class="btn close-btn">Close</button>
+        </div>
+      </form>
+      
+</div>
+
+
+{% endblock %}

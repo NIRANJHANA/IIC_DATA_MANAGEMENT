@@ -1,0 +1,18 @@
+{% extends 'admin_iic_base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <br><br><br><br><br>
+    <h1 style="margin-left: 500px;">Events</h1>
+    <button class="add-events-button" onclick="navigateToCreateEvent()" style="margin-left: 500px;">
+        <span>+</span> Add Events
+    </button>
+</div>
+<script>
+    function navigateToCreateEvent() {
+        window.location.href = '/UserIICCreateEventForm/'; 
+    }
+</script>
+
+{% endblock %}

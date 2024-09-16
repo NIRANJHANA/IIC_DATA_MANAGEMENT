@@ -4,6 +4,7 @@ from . import views
 
 
 urlpatterns = [
+    path('',LoginPage),
     path('UserHome/', UserHome),
     path('UserEdcHome/',UserEdcHome),
     path('UserEdcCourse/',UserEdcCourse),
@@ -19,5 +20,13 @@ urlpatterns = [
     path('UserStartupHome/',UserStartupHome),
     path('UserStartupLearning/',UserStartupLearning),
     path('UserIICSelfdrivenForm/',UserIICSelfdrivenForm),
-    path('',LoginPage),
+    path('AdminDashboard/', AdminDashboard),
+    path('AdminReviewers/', AdminReviewers),
+    path('AdminDepartments/', AdminDepartments),
+    path('AdminSpecialLab/', AdminSpecialLab),
+    path('AdminClubs/', AdminClubs),
+    path('AdminEvents/', AdminEvents),
+    path('Proof/',event_create_view),
+    path('UserIICCreateEventForm/',UserIICCreateEventForm),
+    path('superadmin-dashboard/', superadmin_dashboard, name='superadmin_dashboard'),
 ]
